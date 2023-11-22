@@ -17,4 +17,27 @@ module clk_gen2(output reg clk2);
 	#20 $finish;
 endmodule
 
-//
+//using if else
+module clk_gen3(output reg clk3);
+	initial clk3 = 0;
+	
+	always begin
+		if(clk3)
+			#1 clk3 = 1'b0;
+		else
+			#1 clk3 = 1'b1;
+		end
+endmodule
+
+//add and subtract 
+module clk_gen4(output reg clk4);
+	initial clk4 = 0;
+	
+	always begin
+		#1 clk4 = clk4 + 1'b1;
+		#1 clk4 = clk4 - 1'b1;
+	end
+endmodule
+
+
+		
