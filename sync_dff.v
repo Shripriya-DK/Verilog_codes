@@ -1,4 +1,4 @@
-module sync_dff(input clk,rst,din, 
+module sync_dff(input clk,rst,din,
 				output reg q, output qb);		
 	always@(posedge clk)
 		begin
